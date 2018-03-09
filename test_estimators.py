@@ -17,6 +17,7 @@ def load_data(label_names ='Species') :
     test_path = tf.keras.utils.get_file(TEST_URL.split('/')[-1], TEST_URL)
     test = pd.read_csv(test_path, names=CSV_COLUMN_NAMES, header = 0)
     test_features, test_label = test, test.pop(label_names)
+    # getting the features and label_names
 
     return (train_features, train_label), (test_features, test_label)
 
